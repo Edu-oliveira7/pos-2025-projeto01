@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUAP - Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<body>
+
+    <div class="main-container">
+        <div class="content-wrapper">
+            <div class="info-column">
+                <div class="logo-section">
+                    <img src="./img/suap nova primaria.svg" alt="Logo SUAP e Instituto Federal Rio Grande do Norte">
+                </div>
+                <p class="slogan">
+                    Um software desenvolvido por uma instituição pública para instituições públicas.
+                </p>
+                <img src="./img/logo-login.svg" 
+                     alt="Ilustração de pessoas interagindo com um sistema em um celular gigante"
+                     class="illustration">
+            </div>
+            
+            <div class="login-column">
+                <div class="login-card">
+                    <div class="login-header">
+                        <h2>Login</h2>
+                        <p>Acesse ao Suap IFRN:</p>
+                    </div>
+                    
+                    <form action="#" method="POST">
+                        <div class="input-group">
+                            <label for="usuario">Usuário:</label>
+                            <input type="text" id="usuario" name="usuario" placeholder="Digite sua matrícula" required>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="senha">Senha:</label>
+                            <div class="password-wrapper">
+                                <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            Acessar
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>IFRN - Todos os direitos reservados</p>
+        <p>Por - Eduardo Mauricio e Milleny Jamily</p>
+    </footer>
+
+    <script>
+        // Função para alternar a visibilidade da senha
+        function togglePasswordVisibility() {
+            const passwordInput = document.getElementById('senha');
+            const eyeIcon = document.getElementById('eye-icon');
+            const eyeSlashIcon = document.getElementById('eye-slash-icon');
+
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                eyeIcon.classList.add('hidden');
+                eyeSlashIcon.classList.remove('hidden');
+            } else {
+                passwordInput.type = 'password';
+                eyeIcon.classList.remove('hidden');
+                eyeSlashIcon.classList.add('hidden');
+            }
+        }
+    </script>
+
+</body>
+</html>

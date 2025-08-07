@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #075248;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column; 
+    min-height: 100vh; 
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.main-container {
+    flex-grow: 1; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.content-wrapper {
+    width: 100%;
+    max-width: 1024px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+/* Coluna da Esquerda (Informações) */
+.info-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Estilo para a nova imagem do logo */
+.logo-section img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+
+.slogan {
+    font-size: 1.25rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    max-width: 380px;
+}
+
+.illustration {
+    max-width: 420px;
+    width: 100%;
+    height: auto;
+}
+
+/* Coluna da Direita (Login) */
+.login-column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-card {
+    background-color: #05423A;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    width: 100%;
+    max-width: 420px;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.login-header h2 {
+    font-size: 2.25rem;
+    font-weight: 700;
+}
+
+.login-header p {
+    color: #d1d5db;
+    margin-top: 0.5rem;
+}
+
+/* Formulário */
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #e5e7eb;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.875rem;
+    background-color: #e5e7eb;
+    color: #111827;
+    border-radius: 0.5rem;
+    border: 2px solid transparent;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-group input::placeholder {
+    color: #6b7280;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #25d3b8;
+    box-shadow: 0 0 0 3px rgba(37, 211, 184, 0.4);
+}
+
+.password-wrapper {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 0.875rem;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #4b5563;
+}
+
+.toggle-password svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.submit-btn {
+    width: 100%;
+    background-color: #25d3b8;
+    color: #ffffff;
+    font-weight: 700;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.submit-btn:hover {
+    background-color: #21b8a1;
+    transform: scale(1.05);
+}
+
+
+footer {
+    width: 100%;
+    padding: 1.5rem; 
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.875rem;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+    .content-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .info-column {
+        align-items: center;
+    }
+
+    .logo-section img {
+        margin: 0 auto; 
+    }
+
+    .slogan {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .illustration {
+        margin-top: 1rem;
+    }
+}
