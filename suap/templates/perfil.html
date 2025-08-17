@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="perfil-container">
+  <h2>Aluno</h2>
+  <div class="perfil-card">
+    <img src="{{ user.foto }}" alt="Foto" class="perfil-foto">
+    <div>
+      <p><strong>Nome:</strong> {{ user.nome_usual }}</p>
+      <p><strong>Matrícula:</strong> {{ user.matricula }}</p>
+      <p><strong>Ingresso:</strong> {{ user.curso_periodo|default("2022/1") }}</p>
+    </div>
+  </div>
+</div>
+{% endblock %}
