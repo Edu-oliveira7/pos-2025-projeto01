@@ -1,64 +1,190 @@
+/* === ESTILO GERAL === */
 body {
-    background-color: #f8f9fa;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0f4b46; /* fundo verde SUAP */
+    color: #ffffff;
 }
 
 main {
-    flex: 1;
-    display: flex;
-    align-items: center;
+    padding: 20px;
 }
 
-.card {
-    border: none;
-    border-radius: 1rem;
-}
-
-.form-floating {
-    margin-bottom: 1.5rem;
-}
-
-.btn-primary {
-    background-color: #0d6efd;
-    border-color: #0d6efd;
-    padding: 0.75rem;
-}
-
-.btn-outline-secondary {
-    padding: 0.75rem;
-}
-
-.divider {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    color: #6c757d;
-    margin: 1.5rem 0;
-}
-
-.divider::before,
-.divider::after {
-    content: "";
-    flex: 1;
-    border-bottom: 1px solid #dee2e6;
-}
-
-.divider::before {
-    margin-right: 1rem;
-}
-
-.divider::after {
-    margin-left: 1rem;
-}
-
+/* === NAVBAR === */
 .navbar {
-    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+    background-color: #064c43;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-@media (max-width: 576px) {
-    .card-body {
-        padding: 1.5rem;
-    }
+.navbar .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.navbar span {
+    font-weight: bold;
+    margin-right: auto;
+}
+
+.btn-logout {
+    background-color: #e63946;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.btn-logout:hover {
+    background-color: #d62828;
+}
+
+/* === TELA INICIAL (LOGIN) === */
+.main-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.left-side, .right-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-side {
+    background-color: #0f4b46;
+    padding: 40px;
+}
+
+.left-side img {
+    max-width: 220px;
+    margin-bottom: 20px;
+}
+
+.left-side h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #8ee5d1;
+}
+
+.left-side p {
+    max-width: 300px;
+    font-size: 14px;
+    text-align: left;
+}
+
+.right-side {
+    background-color: #0f4b46;
+}
+
+.login-card {
+    background-color: #064c43;
+    padding: 40px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 380px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+.login-card h2 {
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.login-card p {
+    margin-bottom: 20px;
+    color: #a8d5c9;
+}
+
+.btn-login {
+    display: inline-block;
+    background-color: #04d9b2;
+    color: black;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-login:hover {
+    background-color: #03b89c;
+}
+
+/* === PERFIL === */
+.perfil-container {
+    margin: 40px auto;
+    max-width: 600px;
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.perfil-container h2 {
+    margin-bottom: 20px;
+}
+
+.perfil-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.perfil-foto {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #ccc;
+}
+
+/* === BOLETIM === */
+.boletim-container {
+    margin: 40px auto;
+    max-width: 800px;
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.boletim-container h2 {
+    margin-bottom: 20px;
+}
+
+.boletim-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+    color: black;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.boletim-container th,
+.boletim-container td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.boletim-container th {
+    background-color: #0f4b46;
+    color: white;
+}
+
+select {
+    padding: 8px;
+    border-radius: 6px;
+    border: none;
+    margin-bottom: 10px;
 }
