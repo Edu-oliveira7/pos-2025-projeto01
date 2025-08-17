@@ -1,34 +1,22 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="row justify-content-center">
-    <div class="col-md-8 col-lg-6">
-        <div class="card shadow">
-            <div class="card-body p-4 p-md-5">
-                <div class="text-center mb-4">
-                    <img src="https://suap.ifrn.edu.br/static/img/suap.svg" alt="SUAP Logo" width="180" class="mb-4">
-                    <h1 class="h3 mb-3 fw-normal">Acesso ao SUAP</h1>
-                </div>
-                
-                <form method="POST" action="{{ url_for('acessar') }}">
-                    <div class="form-floating mb-3">
-                        <input type="text" class="form-control" id="matricula" name="matricula" 
-                               placeholder="Digite sua matrícula" required>
-                        <label for="matricula">Matrícula</label>
-                    </div>
-                    
-                    <button class="w-100 btn btn-lg btn-primary mb-3" type="submit">
-                        <i class="bi bi-box-arrow-in-right"></i> Entrar
-                    </button>
-                    
-                    <div class="divider my-4">ou</div>
-                    
-                    <a href="{{ url_for('login') }}" class="w-100 btn btn-lg btn-outline-secondary">
-                        <i class="bi bi-person-circle"></i> Acessar com SUAP
-                    </a>
-                </form>
-            </div>
-        </div>
+<div class="main-container">
+
+  <div class="left-side">
+    <img src="https://suap.ifrn.edu.br/static/img/suap.svg" alt="SUAP Logo">
+    <h1>INSTITUTO FEDERAL<br>Rio Grande do Norte</h1>
+    <p>Um software desenvolvido por uma instituição pública para instituições públicas.</p>
+    <img src="https://suap.ifrn.edu.br/static/img/login_illustration.svg" alt="Ilustração SUAP" width="280">
+  </div>
+
+  <div class="right-side">
+    <div class="login-card">
+      <h2>Login</h2>
+      <p>Acesse ao Suap IFRN:</p>
+      <a href="{{ url_for('login') }}" class="btn btn-login">Acessar com SUAP</a>
     </div>
+  </div>
+
 </div>
 {% endblock %}
